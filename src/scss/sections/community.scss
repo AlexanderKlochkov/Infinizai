@@ -56,59 +56,63 @@
             max-width: 846px;
         }
     }
+}
 
-    .communication__community {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding-top: 44px;
-        
+.communication__community {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 44px;
+    
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    input {
+        height: 80px;
+        border: 1px solid #CCCCCC;
+        padding-left: 13px;
+        outline: none;
+        font: $font-btn-small;
+
+        &::placeholder {
+            font: $font-btn-small;
+            color: #555555;
+        }
+
+        &:hover, &:active, &:focus {
+            border: 1px solid $color-accent;
+        }
+
         @media (min-width: 768px) {
-            flex-direction: row;
-        }
-
-        input {
             width: 445px;
-            height: 80px;
-            border: 1px solid #CCCCCC;
-            padding-left: 13px;
-            outline: none;
-            font: $font-btn-small;
+        }
+    }
 
-            &::placeholder {
-                font: $font-btn-small;
-                color: #555555;
-            }
+    .send-button {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 26px 34px;
+        text-transform: capitalize;
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+        color: $color-text;
+        border: none;
+        border-radius: 0px;
+        font: $font-btn-small;
+        cursor: pointer;
+        background-color: $color-accent;
 
-            &:hover, &:active, &:focus {
-                border: 1px solid $color-accent;
-            }
+        &:hover, &:active, &:focus {
+            opacity: 0.8;
+            transition: all ease 0.3s;
+            background-color: $color-accent;
         }
 
-        .send-button {
-            display: inline-block;
-            margin-top: 16px;
-            padding: 26px 34px;
-            text-transform: capitalize;
-            text-decoration: none;
-            text-align: center;
-            white-space: nowrap;
-            color: $color-text;
-            border: none;
-            border-radius: 0px;
-            font: $font-btn-small;
-            cursor: pointer;
-            background-color: $color-accent;
-
-            &:hover, &:active, &:focus {
-                opacity: 0.8;
-                transition: all ease 0.3s;
-                background-color: $color-accent;
-            }
-
-            @media (min-width: 768px) {
-                margin-top: 0;
-            }
+        @media (min-width: 768px) {
+            margin-top: 0;
         }
     }
 }
