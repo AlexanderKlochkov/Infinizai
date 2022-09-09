@@ -1,0 +1,118 @@
+.community {
+    width: auto;
+    background-color: #577CFF;
+
+    @media (min-width: 1440px) {
+        margin-left: calc(50% - 1440px / 2);
+        margin-right: calc(50% - 1440px / 2);
+    }
+}
+
+.community__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 48px 16px;
+
+    @media (min-width: 768px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    @media (min-width: 1440px) {
+        padding-top: 130px;
+        padding-bottom: 130px;
+        padding-left: calc(50% - 1320px / 2);
+        padding-right: calc(50% - 1320px / 2);
+    }
+
+
+    h1 {
+        text-align: center;
+        font: $font-h1-small;
+        max-width: 746px;
+        text-transform: none;
+        color: #141820;
+
+    
+        @media (min-width: 1024px) {
+            font: $font-h1;
+        }
+    }
+
+    p {
+        font: $font-p-small;
+        color: #555555;
+        text-align: center;
+        max-width: 376px;
+        padding-top: 32px;
+
+        @media (min-width: 768px) {
+            max-width: 576px;
+        }
+        
+        @media (min-width: 1440px) {
+            max-width: 846px;
+        }
+    }
+}
+
+.communication__community {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 44px;
+    
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+
+    input {
+        height: 80px;
+        border: 1px solid #CCCCCC;
+        padding-left: 13px;
+        outline: none;
+        font: $font-btn-small;
+
+        &::placeholder {
+            font: $font-btn-small;
+            color: #555555;
+        }
+
+        &:hover, &:active, &:focus {
+            border: 1px solid $color-accent;
+        }
+
+        @media (min-width: 768px) {
+            width: 445px;
+        }
+    }
+
+    .send-button {
+        display: inline-block;
+        margin-top: 16px;
+        padding: 26px 34px;
+        text-transform: capitalize;
+        text-decoration: none;
+        text-align: center;
+        white-space: nowrap;
+        color: $color-text;
+        border: none;
+        border-radius: 0px;
+        font: $font-btn-small;
+        cursor: pointer;
+        background-color: $color-accent;
+
+        &:hover, &:active, &:focus {
+            opacity: 0.8;
+            transition: all ease 0.3s;
+            background-color: $color-accent;
+        }
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+        }
+    }
+}
